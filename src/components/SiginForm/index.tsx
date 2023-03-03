@@ -9,12 +9,12 @@ import './style.css'
 // Context
 import { useLoginContext } from '../../context/fireContext';
 
-const LoginForm = () => {
+const SignInForm = () => {
 
     const context = useLoginContext();
 
     // Stuff to control the form
-    const { register, handleSubmit, formState: { errors } } = useForm({ defaultValues: { email: "", password: "" } });
+    const { register, handleSubmit, formState: { errors } } = useForm({ defaultValues: { userName: "", email: "", password: "" } });
 
 
     // To navigate other parte of the app
@@ -23,6 +23,7 @@ const LoginForm = () => {
 
     // State variables
     const [inputs, setInputs] = useState({
+        userName: '',
         email: '',
         password: '',
     });
@@ -32,31 +33,27 @@ const LoginForm = () => {
     const [passVisibility, setPassVisibility] = useState(false);
 
     // Routes
-    const toSettingsView = location.pathname && `/settingsView`;
+    const toLoginView = location.pathname && `/`;
 
     // Handlers
     const handleFormSubmit = async (e: any) => {
         setInputs({
+            userName: e.userName,
             email: e.email,
             password: e.password
         })
         // setInvalidLoginMsgVisibility(false);
 
         try {
-            const user = await context.logIn(e.email, e.password);
 
-            if (!user) {
-                throw new Error('No user found');
-            }
+            // const token = await user.user.accessToken;
+            // localStorage.setItem("token", token)
+            // // const uid = user.user.uid;
 
-            const token = await user.user.accessToken;
-            localStorage.setItem("token", token)
-            const uid = user.user.uid;
-
-            context.setUserToken(token);
+            // context.setUserToken(token);
 
 
-            navigate(toSettingsView, { replace: true })
+            navigate(toLoginView, { replace: true })
         } catch (error) {
             console.error(error);
 
@@ -73,34 +70,34 @@ const LoginForm = () => {
     };
 
     return (
-        <div className="WrapperForm">
+        <div className="WrapperFormSignIn">
             <form onSubmit={handleSubmit(handleFormSubmit)}>
 
-                <h2>Login</h2>
-                <div className="Input-box">
-                    <span className="Icon">
+                <h2>Sign in</h2>
+                <div className="Input-boxSignIn">
+                    <span className="IconSignIn">
+                        <i className='bx bxs-user'></i>
+                    </span>
+                    <input type="text" placeholder='Username' {...register('userName', { required: true })} />
+                </div>
+                <div className="Input-boxSignIn">
+                    <span className="IconSignIn">
                         <i className='bx bxs-envelope' ></i>
                     </span>
                     <input type="email" placeholder='Email' {...register('email', { required: true })} />
                 </div>
-                <div className="Input-box">
-                    <span className="Icon">
+                <div className="Input-boxSignIn">
+                    <span className="IconSignIn">
                         <i className='bx bxs-lock-alt'></i>
                     </span>
                     <input type="password" placeholder='Password' {...register('password', { required: true })} />
                 </div>
-                <div className="Forgot-pass">
-                    <a href="#">Forgot Password?</a>
-                </div>
 
-                <button type="submit">Login</button>
-                <div className="Register-link">
-                    <p>Don't have an account? <a href='/signInView'>Register</a></p>
-                </div>
+                <button type="submit">Sign in</button>
             </form>
         </div>
 
     );
 }
 
-export default LoginForm
+export default SignInForm

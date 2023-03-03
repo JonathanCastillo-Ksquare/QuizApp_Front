@@ -1,107 +1,120 @@
-.WrapperCards {
-    width: 100vw;
-    height: 100vh;
+ @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+ .WrapperCards {
+     width: 100vw;
+     height: 100vh;
+
+     background: #151b29;
 
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     align-items: center;
+ }
 
-.HeaderSettings {
-    width: 100vw;
-    height: 15vh;
+ .HeaderSettings {
+     width: 100vw;
+     height: 15vh;
 
-    display: flex;
-    flex-direction: row;
-}
+     display: flex;
+     flex-direction: row;
+ }
 
-.noth {
-    width: 20vw;
-    height: 100%;
-}
+ .noth {
+     width: 20vw;
+     height: 100%;
+ }
 
-.HeaderSettings h1 {
-    width: 60vw;
-    height: 100%;
+ .HeaderSettings h1 {
+     width: 60vw;
+     height: 100%;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+     display: flex;
+     justify-content: center;
+     align-items: center;
 
-    text-align: center;
-    font-size: 2.3rem;
-    color: #f1f1f1;
-}
+     font-family: "Roboto", sans-serif;
+     text-align: center;
+     text-shadow: 0 0 5px #ffa500,
+         0 0 15px #ffa500,
+         0 0 20px #ffa500,
+         0 0 40px #ffa500,
+         0 0 60px #ff0000,
+         0 0 10px #ff8d00,
+         0 0 90px #ff0000;
+     font-size: 2.3rem;
+     color: #fff6a9;
+     animation: blink 12s infinite;
+ }
 
-.UserInfo {
-    width: 20vw;
-    height: 100%;
+ .UserInfo {
+     width: 20vw;
+     height: 100%;
 
 
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+     display: flex;
+     flex-direction: column;
+     align-items: flex-end;
 
-}
+ }
 
-.User {
-    width: 100%;
-    height: 100%;
+ .User {
+     width: 100%;
+     height: 100%;
 
-    display: flex;
-    flex-direction: row;
-    justify-content: right;
-    margin-right: 0.8vw;
-    align-items: center;
-}
+     display: flex;
+     flex-direction: row;
+     justify-content: right;
+     margin-right: 0.8vw;
+     align-items: center;
+ }
 
-.UserName {
-    background-color: inherit;
-    font-size: 1.2rem;
-    color: #f1f1f1;
-    text-shadow: 0 0 5px #580b0c44, 0 0 10px #f70b0fbd, 0 0 20px #ffffff;
-    font-style: italic;
-    margin-right: 0.8vw;
+ .UserName {
+     background-color: inherit;
+     font-size: 1.2rem;
+     color: #f1f1f1;
+     text-shadow: 0 0 5px #580b0c44, 0 0 10px #f70b0fbd, 0 0 20px #ffffff;
+     font-style: italic;
+     margin-right: 0.8vw;
 
-}
+ }
 
-.Score {
-    font-size: 1.2rem;
-    margin-right: 0.8vw;
-    border: none;
-    background: none;
-    color: #f1f1f1;
-    text-shadow: 0 0 5px #580b0c44, 0 0 10px #f70b0fbd, 0 0 20px #ffffff;
-}
+ .Score {
+     font-size: 1.2rem;
+     margin-right: 0.8vw;
+     border: none;
+     background: none;
+     color: #f1f1f1;
+     text-shadow: 0 0 5px #580b0c44, 0 0 10px #f70b0fbd, 0 0 20px #ffffff;
+ }
 
-.Photo {
-    width: 45px;
-    height: 45px;
+ .Photo {
+     width: 45px;
+     height: 45px;
 
-    border: 2px solid #f1f1f1;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+     border: 2px solid #f1f1f1;
+     border-radius: 50%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
 
-    background-color: inherit;
-    box-shadow: 0 0 10px #24b6e344, 0 0 10px #69cae86e, 0 0 11px #1bb8d0;
-}
+     background-color: inherit;
+     box-shadow: 0 0 10px #24b6e344, 0 0 10px #69cae86e, 0 0 11px #1bb8d0;
+ }
 
-.CardsContainer {
-    width: 80vw;
-    height: 80vh;
+ .CardsContainer {
+     width: 80vw;
+     height: 80vh;
 
-    display: flex;
-    justify-content: space-evenly;
+     display: flex;
+     justify-content: space-evenly;
 
-}
+ }
 
-.bx-user {
-    font-size: 38px;
-    border-radius: 50%;
-    color: white;
-    text-shadow: 0 0 10px #24b6e344, 0 0 10px #69cae86e, 0 0 11px #1bb8d0;
-}
+ .bx-user {
+     font-size: 38px;
+     border-radius: 50%;
+     color: white;
+     text-shadow: 0 0 10px #24b6e344, 0 0 10px #69cae86e, 0 0 11px #1bb8d0;
+ }
