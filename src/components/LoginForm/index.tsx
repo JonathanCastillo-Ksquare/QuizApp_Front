@@ -90,12 +90,12 @@ const LoginForm = () => {
                     <input type="password" placeholder='Password' {...register('password', { required: true })} />
                 </div>
                 <div className="Forgot-pass">
-                    <a href="#">Forgo Password?</a>
+                    <a href="">Forgot Password?</a>
                 </div>
 
                 <button type="submit">Login</button>
-                <div className="Registe-link">
-                    <p>Don't have an account? <a href="#">Register</a></p>
+                <div className="Register-link">
+                    <p>Don't have an account? <a href="">Register</a></p>
                 </div>
             </form>
         </div>

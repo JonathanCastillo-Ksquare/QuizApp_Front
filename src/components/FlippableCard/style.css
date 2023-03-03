@@ -11,19 +11,30 @@
 
     border-radius: 16px;
 
-    box-shadow: 0 0 10px #24b6e344, 0 0 10px #69cae86e, 0 0 20px #1bb8d0;
+    border: 2px solid #0ef;
+    box-shadow: 0 0 20px #0ef, inset 0 0 20px #0ef, 0 0 20px #ffffff;
 
     perspective: 1000px;
+
+    transition: all 0.5s;
 }
 
 .Flippable-card-container:nth-of-type(2n) {
-    box-shadow: 0 0 5px #c47112, 0 0 10px #fabc16, 0 0 20px #ffffff;
+    border: 2px solid #fabc16;
+    box-shadow: 0 0 20px #c47112, inset 0 0 20px #fabc16, 0 0 20px #ffffff;
 }
 
 .Flippable-card-container:nth-of-type(3n) {
-    box-shadow: 0 0 5px #580b0c44, 0 0 10px #f70b0fbd, 0 0 20px #ffffff;
+    border: 2px solid #f70b0fbd;
+    box-shadow: 0 0 20px #ef0e1282, inset 0 0 20px #f70b0fbd, 0 0 20px #ffffff;
 }
 
 .Flippable-card-container:nth-of-type(4n) {
-    box-shadow: 0 0 5px #334d18, 0 0 10px #93DA49, 0 0 20px #ffffff;
+    border: 2px solid #93DA49;
+    box-shadow: 0 0 20px #334d18, inset 0 0 20px #93DA49, 0 0 20px #ffffff;
+}
+
+.Flippable-card-container:hover {
+    transform: translateY(-0.50em);
+    cursor: pointer;
 }

@@ -19,14 +19,6 @@ const Card = ({ category, description }: Props) => {
 
     return (
         <div className='Card'>
-            <div className='Card-back'>
-                <header>Level</header>
-                <main>
-                    <div className="CardLevel">Easy</div>
-                    <div className="CardLevel">Medium</div>
-                    <div className="CardLevel">Hard</div>
-                </main>
-            </div>
             <div className='Card-front'>
                 <header>{category}</header>
                 <main>{description}</main>
