@@ -1,0 +1,203 @@
+.Wrapper {
+    font-family: perpetua;
+    background-color: #151b29;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    color: #ffa260;
+}
+
+.HeaderSettingsQuestions {
+    width: 100vw;
+    height: 15vh;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.nothQuestions {
+    width: 20vw;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid white;
+}
+
+.HeaderSettingsQuestions h1 {
+    width: 60vw;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    font-size: 2.8rem;
+    color: #ffa260;
+
+}
+
+.UserInfoQuestions {
+    width: 20vw;
+    height: 100%;
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+}
+
+.UserQuestions {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    margin-right: 0.5vw;
+    align-items: center;
+}
+
+.UserNameQuestions {
+    background-color: inherit;
+    font-size: 1.8rem;
+    color: #f1f1f1;
+    text-shadow: 0 0 5px #580b0c44, 0 0 10px #f70b0fbd, 0 0 20px #ffffff;
+    font-style: italic;
+    margin-right: 0.5vw;
+
+}
+
+.PhotoQuestions {
+    width: 45px;
+    height: 45px;
+
+    border: 2px solid #f1f1f1;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: inherit;
+    box-shadow: 0 0 10px #24b6e344, 0 0 10px #69cae86e, 0 0 11px #1bb8d0;
+}
+
+.bx-userQuestions {
+    font-size: 38px;
+    border-radius: 50%;
+    color: white;
+    text-shadow: 0 0 10px #24b6e344, 0 0 10px #69cae86e, 0 0 11px #1bb8d0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 60vh;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 20vh;
+}
+
+.QuestionTitle {
+    width: 100vw;
+    height: 10vh;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.QuestionName {
+    width: 100vw;
+    height: 10vh;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.Answers {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 60vw;
+    height: 40vh;
+}
+
+.Bttn {
+    width: 28vw;
+    height: 15vh;
+    background: none;
+    color: #ffa260;
+    border: 2px solid;
+    padding: 1em 2em;
+    font-size: 1em;
+
+}
+
+.IncorrectAnswer {
+    background-color: red;
+}
+
+.CorrectAnswer {
+    background-color: greenyellow;
+}
+
+.Bttn:hover {
+    border-color: #f1ff5c;
+    box-shadow: 0 0.5em 0.5em -0.4em #f1ff5c;
+    transform: translateY(-0.25em);
+    cursor: pointer;
+}
+
+.Over {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bx-help-circle {
+    animation: float 3s ease-in-out infinite;
+    animation-delay: 1s;
+}
+
+.bx-help-circle:hover {
+    cursor: pointer;
+}
+
+@keyframes float {
+    0% {
+        animation-delay: 3s;
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.bxs-home {
+    font-size: 45px;
+    color: #fabc16;
+    background: none;
+    text-shadow: 0 0 5px #c47112, 0 0 10px #fabc16, 0 0 20px #ffffff;
+    cursor: pointer;
+}

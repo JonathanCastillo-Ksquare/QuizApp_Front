@@ -3,13 +3,19 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { LoginContextProvider } from './context/fireContext';
+import { DataContextProvider } from './context/dataContext';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <LoginContextProvider>
+      <DataContextProvider>
+        <App />
+      </DataContextProvider>
+    </LoginContextProvider>
   </React.StrictMode>
 );
 
